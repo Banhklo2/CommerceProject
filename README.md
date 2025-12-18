@@ -53,7 +53,7 @@ Step1~Step3로 기능을 확장하면서 **객체지향 설계(역할 분리) + 
 예시 (Product):
 - `private` 필드로 데이터 보호
 - `getName()`, `getPrice()` 등으로만 접근
-- 
+  
 ---
 
 ## ✅ Step별 목표 & 구현 내용
