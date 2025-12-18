@@ -6,7 +6,7 @@ public class Product {
     private final String name; // 상품 이름
     private final String price; // 상품 가격
     private final String description; // 상품 설명
-    private final int stock;
+    private int stock;
 
     //2.생성자
     // Product 객체를 생성할 때 상품 정보를 한 번에 초기화
@@ -23,4 +23,10 @@ public class Product {
     public String getPrice() { return price; }
     public String getDescription() { return description; }
     public int getStock() { return stock; }
+
+    public void decreaseStock(int amount) {
+        if (amount <= 0) throw new IllegalArgumentException("수량은 1 이상이어야 합니다.");
+        if (stock < amount) throw new IllegalArgumentException("재고가 부족합니다.");
+        stock -= amount;
+    }
 }
